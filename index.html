@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!--  Meta  -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raf Skovron Customer Success Manager </title>
+
+  <!--  Styles  -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sonsie+One" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+
+  <main>
+      <div class="container">
+        <header>
+            <a id="menu" class="header__menu">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path d="M2 6h20v3H2zm0 5h20v3H2zm0 5h20v3H2z"/>
+              </svg>
+            </a>
+
+
+          <div class="headerinner">
+            <picture>
+                <source media="(min-width:800px)" srcset="img/gate.svg, img/hidef.jpg 2x">
+                <img src="img/gate.svg" srcset="img/hidef.jpg" alt="goldengate logo" title="tooltip" class="logo">
+            </picture>
+            <h1>Raf Skovron</h1>
+            <h2>fintech pro</h2>
+
+          </div>
+
+
+
+        </header>
+
+        <nav id="drawer" class="nav">
+           <ul class="nav__list">
+             <li class="nav__item"><a href="#">Blog</a></li>
+             <li class="nav__item"><a href="#">Photography</a></li>
+             <li class="nav__item"><a href="#">Code Tutorials</a></li>
+           </ul>
+        </nav>
+
+
+
+
+        <div class="aside">
+          <h2>Blog</h2>
+          <h2>Photography</h2>
+          <h2>Code Tutorials</h2>
+        </div>
+
+        <div class="hero">
+          <article>
+            <p><h2>Raf has <em>a lot</em> of cool skills. He knows how to:</h2></p>
+            <ul>
+              <li>drive revenue and customer success with SAAS products</li>
+              <li>use CSS HTML and JQuery to build web pages for customer toolkits and email campaigns</li>
+              <li>scrape data with Python for use in prospecting</li>
+              <li>develop sales forecasts and metrics like CRM, churn and ARPU</li>
+              <li>and much more!</li>
+            </ul>
+           </article>
+        </div>
+
+
+
+        <div class="feature_box">
+            <h2>Wedding Crimes</h2>
+            <img src="img/thief.svg" alt="clip art of a thief" title="tooltip">
+            <p>I went to 3 weddings and saw some shady stuff. Protect yourself with these tips! </p>
+
+        </div>
+
+        <div class="feature_box">
+            <h2>A Tax Site</h2>
+            <img src="img/taxes.svg" alt="the word tax" title="tooltip">
+            <p>Do you need help with your taxes? I put this site together using Wordpress before I knew CSS</p>
+
+        </div>
+
+        <div class="feature_box">
+            <h2>Python Snippets</h2>
+
+            <img src="img/python.svg" alt="python language icon" title="tooltip">
+
+            <p>Here is where I store my notes in form of web pages! </p>
+
+        </div>
+
+    </div>
+
+
+
+
+
+  </main>
+    <footer>
+      <p>Copyright 2018</p>
+    </footer>
+
+
+  <script>
+        /*
+         * Open the drawer when the menu ison is clicked.
+         */
+        var menu = document.querySelector('#menu');
+        var main = document.querySelector('main');
+        var drawer = document.querySelector('.nav');
+        menu.addEventListener('click', function(e) {
+          drawer.classList.toggle('open');
+          e.stopPropagation();
+        });
+        main.addEventListener('click', function() {
+          drawer.classList.remove('open');
+        });
+  </script>
+
+
+
+</body>
+</html>

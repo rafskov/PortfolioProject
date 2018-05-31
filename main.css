@@ -1,0 +1,209 @@
+/**
+ * index.scss
+ * - Add any styles you want here!
+ */
+
+body {
+  background: white;
+  font-family: 'Arial';
+}
+
+
+.logo {
+  align-content:"center";
+}
+
+
+.hero {
+  width:100%;
+
+}
+
+
+img {
+  display:block;
+  max-height:50%;
+  max-width:50%;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+
+.headerinner {
+  text-align:right;
+  font-family: 'Sonsie One', cursive;
+
+}
+
+.header__menu {
+  display: none;
+}
+
+
+
+.nav__item {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 24%;
+  text-align: center;
+  line-height: 24px;
+  padding: 24px;
+  text-transform: uppercase;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #616161;
+  padding: 1.5em;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+  color: #212121;
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+  .container {
+    display: flex;
+    flex-wrap:wrap;
+  }
+  .feature_box {
+
+    width:100%;
+    margin-bottom: 20px;
+    text-align:center;
+    order:4;
+  }
+  .aside {
+    display:none;
+
+  }
+  header {
+    width:100%;
+    order:1;
+  }
+
+  .header__menu {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  padding: 1em;
+  }
+
+  .header__menu svg {
+  width: 32px;
+  fill: #E0E0E0;
+  }
+  
+  .hero {
+    width:100%;
+    order:3;
+  }
+
+  .nav {
+    z-index: 10;
+    background-color: #fff;
+    width: 300px;
+    position: absolute;
+    /* This trasform moves the drawer off canvas. */
+    -webkit-transform: translate(-300px, 0);
+    transform: translate(-300px, 0);
+    /* Optionally, we animate the drawer. */
+    transition: transform 0.3s ease;
+  }
+  .nav.open {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    text-align: left;
+  }
+
+}
+
+
+@media screen and (min-width: 421px) {
+  .container {
+    display: flex;
+    flex-wrap:wrap;
+  }
+  .feature_box {
+
+    width:50%;
+    margin-bottom: 20px;
+    text-align:center;
+    order:4;
+  }
+  .aside {
+    padding:20px;
+    margin-bottom: 20px;
+    width:25%;
+    text-align:center;
+    order:2;
+
+  }
+  header {
+    width:100%;
+    order:1;
+  }
+  .hero {
+    width:100%;
+    order:3
+  }
+
+  #drawer {
+    display:none;
+  }
+
+
+}
+
+
+@media screen and (min-width: 600px) {
+  body {
+    font-size:1.25em;
+
+  }
+
+  .container {
+    display: flex;
+    flex-wrap:wrap;
+    margin-left: auto;
+    margin-right:auto;
+  }
+  .feature_box {
+
+    width:33%;
+    margin-bottom: 20px;
+    text-align:center;
+    order:3;
+  }
+  .aside {
+    padding:20px;
+    margin-bottom: 20px;
+    width:25%;
+    text-align:center;
+    order:2;
+
+  }
+  header {
+    width:100%;
+    order:1;
+  }
+  .hero {
+    width:50%;
+    order:2;
+  }
+
+  #drawer {
+    display:none;
+  }
+
+}
